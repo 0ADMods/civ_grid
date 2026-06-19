@@ -1,0 +1,10 @@
+{
+	"name": "civ_grid",
+	"label": "A.D.",
+	"version": "0.28.0",
+	"url": "https://github.com/0ADMods/civ_grid",
+	"description": "This mod creates a grid for selecting civilizations using the existing map_grid as a base.",
+	"dependencies": ["0ad=0.28.0"],
+	"type": "mod"
+}
+	
