@@ -49,8 +49,9 @@
 			name="playerCivBrowser[n]"
 			type="button"
 			style="IconButton"
-			sprite="iconInfoGold"
-			sprite_over="iconInfoWhite"
+			sprite="ModernGear"
+			sprite_over="ModernGearHover"
+			sprite_pressed="ModernGearPressed"
 			size="85%-22 6 85%-4 22"
 			tooltip="Abrir navegador de civilizações"/>
 			
