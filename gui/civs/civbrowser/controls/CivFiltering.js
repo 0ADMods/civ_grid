@@ -21,30 +21,16 @@ CivBrowserPageControls.prototype.CivFiltering = class
 
 	onOpenPage()
 	{
-		let regions = [];
+		this.CivType.control.list =
+			this.CivBrowserPage.Regions;
 
-		for (let code in g_CivData)
-		{
-			let region =
-				String(
-					g_CivData[code].Region ||
-					"Other"
-				);
-
-			if (!regions.includes(region))
-				regions.push(region);
-		}
-
-		regions.sort();
-
-		regions.unshift("All");
-
-		this.CivType.control.list = regions.slice();
-		this.CivType.control.list_data = regions.slice();
-
-		this.CivType.select("All");
+		this.CivType.control.list_data =
+			this.CivBrowserPage.Regions;
 
 		this.renderCivFilter();
+
+		this.CivType.select("All");
+		this.CivFilter.select("All");
 
 		setTimeout(() =>
 		{
@@ -72,31 +58,15 @@ CivBrowserPageControls.prototype.CivFiltering = class
 
 	select(filter, type)
 	{
-		let regions = [];
+		this.CivType.control.list =
+			this.CivBrowserPage.Regions;
 
-		for (let code in g_CivData)
-		{
-			let region =
-				String(
-					g_CivData[code].Region ||
-					"Other"
-				);
-
-			if (!regions.includes(region))
-				regions.push(region);
-		}
-
-		regions.sort();
-
-		regions.unshift("All");
-
-		this.CivType.control.list = regions.slice();
-		this.CivType.control.list_data = regions.slice();
-
-		this.CivType.select(type || "All");
+		this.CivType.control.list_data =
+			this.CivBrowserPage.Regions;
 
 		this.renderCivFilter();
 
+		this.CivType.select(type || "All");
 		this.CivFilter.select(filter || "All");
 
 		this.CivGridBrowser.updateCivList();

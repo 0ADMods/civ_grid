@@ -151,11 +151,13 @@ class CivGridBrowser extends GridBrowser
 
 }
 
-CivGridBrowser.prototype.ItemRatio = 4 / 3;
+CivGridBrowser.prototype.ItemRatio = 1 / 1;
 
-CivGridBrowser.prototype.DefaultItemWidth = 200;
+CivGridBrowser.prototype.DefaultItemWidth = 180;
 
-CivGridBrowser.prototype.MinItemWidth = 100;
+CivGridBrowser.prototype.MinItemWidth = 128;
+
+CivGridBrowser.prototype.MaxItemWidth = 300;
 
 CivGridBrowser.prototype.HotkeyConfigNext =
 	"tab.next";
