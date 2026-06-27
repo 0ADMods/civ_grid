@@ -69,10 +69,12 @@ CivBrowserPageControls.prototype.CivDescription = class
 
 		this.CivBrowserSelectedInfo.caption =
 			sprintf(
-				translate("Region: %(region)s    |    Culture: %(culture)s"),
+				translate("Region: %(region)s  •  Culture: %(culture)s"),
 				{
-					"region": Civ.Region,
-					"culture": Civ.Culture.join(", ")
+					"region": Civ.Region.join(", "),
+					"culture": (Array.isArray(Civ.Culture) ?
+						Civ.Culture :
+						["Unknown"]).join(", ")
 				}
 			);
 

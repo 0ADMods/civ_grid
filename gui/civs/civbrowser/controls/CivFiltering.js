@@ -75,11 +75,29 @@ CivBrowserPageControls.prototype.CivFiltering = class
 
 	renderCivFilter()
 	{
-		this.CivFilter.control.list =
-			["All"];
+		let cultures = ["All"];
 
-		this.CivFilter.control.list_data =
-			["All"];
+		const region = this.getSelectedCivType();
+
+		for (let civ of this.CivBrowserPage.CivList)
+		{
+			// Se uma região estiver selecionada,
+			// mostra apenas culturas dessa região.
+			if (region != "All" && !civ.Region.includes(region))
+				continue;
+
+			for (let culture of civ.Culture)
+				if (!cultures.includes(culture))
+					cultures.push(culture);
+		}
+
+		cultures.sort();
+
+		// Mantém "All" no início
+		cultures = ["All"].concat(cultures.filter(c => c != "All"));
+
+		this.CivFilter.control.list = cultures;
+		this.CivFilter.control.list_data = cultures;
 	}
 
 	// TODO: would be nicer to store this state somewhere else.

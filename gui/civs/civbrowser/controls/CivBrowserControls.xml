@@ -71,13 +71,20 @@
 		type="button"
 		style="ModernButtonRed"
 		size="0 100%-60 100% 100%-30">
-
 		<translatableAttribute id="caption">
 			Surprise Me
 		</translatableAttribute>
-
 	</object>
-	<object name="CivBrowserPageClose" type="button" style="ModernButtonRed" hotkey="cancel" size="0 100%-30 50% 100%"/>
+	<object 
+	name="CivBrowserPageClose" 
+	type="button" 
+	style="ModernButtonRed" 
+	hotkey="cancel" 
+	size="0 100%-30 50% 100%">
+	<translatableAttribute id="caption">
+		Cancel
+	</translatableAttribute>
+	</object>
 	<object name="CivBrowserPageSelect" type="button" style="ModernButtonRed" size="50% 100%-30 100% 100%">
 		<translatableAttribute id="caption" context="Civ selection dialog">Select</translatableAttribute>
 	</object>

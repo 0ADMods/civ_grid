@@ -51,8 +51,11 @@ class CivBrowser
 
 		for (let civ of this.CivList)
 		{
-			if (!this.Regions.includes(civ.Region))
-				this.Regions.push(civ.Region);
+			for (let region of civ.Region)
+			{
+				if (!this.Regions.includes(region))
+					this.Regions.push(region);
+			}
 		}
 
 		this.Regions.sort();
@@ -90,7 +93,9 @@ class CivBrowser
 
 				"icon": civ.Emblem || "",
 
-				"Region": String(civ.Region || "Unknown"),
+				"Region": Array.isArray(civ.Region) ?
+					civ.Region :
+					[civ.Region || "Unknown"],
 
 				"Culture": Array.isArray(civ.Culture) ?
 					civ.Culture :
