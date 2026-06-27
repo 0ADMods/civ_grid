@@ -43,8 +43,20 @@ class CivGridBrowser extends GridBrowser
 
 		this.updateCivList();
 
+	let selectedCiv =
+		g_GameSettings.playerCiv.values[
+			this.CivBrowserPage.selectedPlayer ?? 0
+		];
+
+		let index = this.CivList.findIndex(
+			civ => civ.file == selectedCiv
+		);
+
+		if (index == -1)
+			index = 0;
+
 		if (this.CivList.length)
-			this.setSelectedIndex(0);
+			this.setSelectedIndex(index);
 
 		this.currentPage = 0;
 
