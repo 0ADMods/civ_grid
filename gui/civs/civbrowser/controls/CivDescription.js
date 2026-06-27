@@ -15,8 +15,6 @@ CivBrowserPageControls.prototype.CivDescription = class
 			Engine.GetGUIObjectByName(
 				"CivBrowserSelectedInfo"
 			);
-		let computedSize = this.CivBrowserSelectedPreview.getComputedSize();
-		let top = 0;
 		let width = 256;
 		let height = width;
 
@@ -70,11 +68,13 @@ CivBrowserPageControls.prototype.CivDescription = class
 			Civ.name;
 
 		this.CivBrowserSelectedInfo.caption =
-			translate("Region") + ": " +
-			Civ.Region +
-			"\n" +
-			translate("Culture") + ": " +
-			Civ.Culture.join(", ");
+			sprintf(
+				translate("Region: %(region)s    |    Culture: %(culture)s"),
+				{
+					"region": Civ.Region,
+					"culture": Civ.Culture.join(", ")
+				}
+			);
 
 		this.CivBrowserSelectedDescription.caption =
 			Civ.description;

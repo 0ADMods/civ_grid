@@ -3,28 +3,29 @@
 	<object
     name="CivBrowserSelectedPreview"
     type="image"
-    size="0 0 100% 0"/>
+    size="50%-128 0 50%+128 256"/>
 
 <object
-    name="CivBrowserSelectedName"
-    type="text"
-    style="ModernLabelText"
-    font="sans-bold-22"
-    text_align="center"
-    text_valign="center"
-    size="0 0 100% 32"/>
+	name="CivBrowserSelectedName"
+	type="text"
+	style="ModernLabelText"
+	font="sans-bold-22"
+	text_align="center"
+	text_valign="center"
+	size="0 240 100% 272"/>
 
 <object
-    name="CivBrowserSelectedInfo"
-    type="text"
-    style="ModernText"
-    text_align="center"
-    font="sans-bold-14"
-    size="0 0 100% 24"/>
+	name="CivBrowserSelectedInfo"
+	type="text"
+	style="ModernText"
+	text_align="center"
+	font="sans-bold-14"
+	size="0 276 100% 300"/>
 
 <object
-    name="CivBrowserSelectedDescription"
-    type="text"
-    style="ModernText"
-    size="10 0 100%-10 100%-40"/>
+	name="CivBrowserSelectedDescription"
+	type="text"
+	style="ModernText"
+	size="10 310 100%-10 100%-40"/>
+
 </object>
