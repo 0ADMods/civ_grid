@@ -119,7 +119,11 @@ class CivGridBrowser extends GridBrowser
 			this.CivBrowserPage.controls
 				.CivFiltering
 				.getSelectedCivType();
-
+		const culture =
+			this.CivBrowserPage.controls
+				.CivFiltering
+				.getSelectedCivFilter();
+				
 		const searchText =
 			this.CivBrowserPage.controls
 				.CivFiltering
@@ -132,12 +136,21 @@ class CivGridBrowser extends GridBrowser
 			region != "All"
 		)
 		{
-			CivList =
-				CivList.filter(
-					civ =>
-						(civ.civData.Region || "Other")
-						== region
-				);
+		if (region != "All")
+		{
+			CivList = CivList.filter(civ =>
+				Array.isArray(civ.Region) &&
+				civ.Region.includes(region)
+			);
+		}
+
+		if (culture != "All")
+		{
+			CivList = CivList.filter(civ =>
+				Array.isArray(civ.Culture) &&
+				civ.Culture.includes(culture)
+			);
+		}
 		}
 
 		// filtro por texto

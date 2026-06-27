@@ -52,8 +52,34 @@ CivBrowserPageControls.prototype.CivFiltering = class
 
 	onChange()
 	{
-		this.CivGridBrowser.updateCivList();
-		this.CivGridBrowser.goToPageOfSelected();
+		try
+		{
+			this.CivGridBrowser.updateCivList();
+
+			if (!this.CivGridBrowser.CivList.length)
+			{
+				this.CivGridBrowser.selected = -1;
+				this.CivGridBrowser.currentPage = 0;
+				return;
+			}
+
+			if (
+				this.CivGridBrowser.selected < 0 ||
+				this.CivGridBrowser.selected >= this.CivGridBrowser.CivList.length
+			)
+				this.CivGridBrowser.setSelectedIndex(0);
+
+			this.CivGridBrowser.goToPageOfSelected();
+		}
+		catch (e)
+		{
+			error("CivBrowser filter error: " + e);
+
+			this.CivGridBrowser.CivList = [];
+			this.CivGridBrowser.itemCount = 0;
+			this.CivGridBrowser.selected = -1;
+			this.CivGridBrowser.resizeGrid();
+		}
 	}
 
 	select(filter, type)

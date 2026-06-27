@@ -103,6 +103,7 @@ class CivBrowser
 
 				"civData": civ
 			});
+			
 		}
 
 		civs.sort((a, b) =>
