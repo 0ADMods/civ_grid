@@ -1,7 +1,7 @@
 {
 	"Code": "han",
-	"Culture":["china"],
-	"Region": ["asia"],
+	"Culture": "Chinese",
+	"Region": ["Asia", "East Asia"],
 	"Music": [
 		{
 			"File": "Red_Dawn.ogg",

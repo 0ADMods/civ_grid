@@ -1,6 +1,7 @@
 {
 	"Code": "iber",
-	"Culture": ["iber"],
+	"Culture": "Iberian",
+	"Region": "Europe",
 	"Music": [
 		{
 			"File": "An_old_Warhorse_goes_to_Pasture.ogg",

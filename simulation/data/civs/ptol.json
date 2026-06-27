@@ -1,6 +1,7 @@
 {
 	"Code": "ptol",
-	"Culture": ["ptol"],
+	"Culture": ["Egyptian", "Greek", "Hellenistic"],
+	"Region": ["Africa", "Egypt"],
 	"Music": [
 		{
 			"File": "Ammon-Ra.ogg",

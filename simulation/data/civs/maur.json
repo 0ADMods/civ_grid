@@ -1,6 +1,7 @@
 {
 	"Code": "maur",
-	"Culture": ["maur"],
+	"Culture": ["Hindu"],
+	"Region": ["Asia", "India"],
 	"Music": [
 		{
 			"File": "An_old_Warhorse_goes_to_Pasture.ogg",
