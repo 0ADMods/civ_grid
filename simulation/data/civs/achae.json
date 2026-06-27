@@ -1,6 +1,7 @@
 {
 	"Code": "achae",
-	"Culture": ["achae"],
+	"Culture": "Persian",
+	"Region": ["Asia", "Middle East"],
 	"Music": [
 		{
 			"File": "Eastern_Dreams.ogg",

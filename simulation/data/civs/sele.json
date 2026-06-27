@@ -1,6 +1,7 @@
 {
 	"Code": "sele",
-	"Culture": ["sele"],
+	"Culture": ["Greek", "Hellenistic", "Persian"],
+	"Region": ["Asia", "Middle East"],
 	"Music": [
 		{
 			"File": "Rise_of_Macedon.ogg",

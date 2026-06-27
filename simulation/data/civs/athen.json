@@ -1,6 +1,7 @@
 {
 	"Code": "athen",
-	"Culture": ["hele"],
+	"Culture": "Greek",
+	"Region": ["Europe", "Greece"],
 	"Music": [
 		{
 			"File": "Harvest_Festival.ogg",
