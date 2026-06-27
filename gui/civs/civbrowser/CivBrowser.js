@@ -77,6 +77,9 @@ class CivBrowser
 		{
 			let civ = g_CivData[code];
 
+			if (civ.SelectableInGameSetup === false)
+				continue;
+
 			civs.push({
 				"file": code,
 				"code": code,
